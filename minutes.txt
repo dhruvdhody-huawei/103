@@ -1,0 +1,120 @@
+PCE Working Group Meeting – 13:50-15:50 Monday Afternoon session I 5th Nov 2018
+
+   o Chairs: Jonathan Hardwick, Julien Meuric (remote)
+   o Secretery: Dhruv Dhody
+   o Slide - https://datatracker.ietf.org/meeting/103/session/pce
+   o Etherpad -http://etherpad.tools.ietf.org:9000/p/notes-ietf-103-pce?useMonospaceFont=true
+   o Meetecho:  http://www.meetecho.com/ietf103/pce  
+
+1. Introduction
+1.1. Administrivia, Agenda Bashing (chairs, 5 min)
+
+Thank You Jon, for your service! 
+
+1.2. WG Status (chairs, 20 min) [25/120]
+Daniel King: [draft-ietf-pce-inter-area-as-applicability] Will be posting it 
+             soon(tm). 
+Daniel King: [draft-ietf-pce-hierarchy-extensions] Already posted. Will respond 
+             to Adrian comments on the list.
+Adrian Farrel: [draft-ietf-pce-pcep-flowspec] Almost ready, implementers speak 
+               up! 
+Haomian Zheng: [draft-ietf-pce-enhanced-errors] Made an update to align with 
+               other PCEP extension, error handling requirement for future 
+               extension is added.
+Jonathan Hardwick: Please take a look at this, if you have a dependent I-D
+Dhruv Dhody: [draft-ietf-pce-association-diversity, …-policy] No update, we are 
+             waiting  for association group to move. 
+             [draft-ietf-pce-pcep-yang] Update made and asked for an early yang 
+             doctor review, and received some comments on the list, will 
+             addrress them together.
+             [draft-ietf-pce-stateful-pce-lsp-scheduling] No update, and we 
+             would like more reviews. 
+             [draft-ietf-pce-lsp-control-request] Simple extention, basically 
+             ready. 
+             [draft-ietf-pce-stateful-path-protection] Waiting for association 
+             group
+Young Lee: [draft-leedhody-pce-vn-association] Finished the coordination with 
+           Igor on specifying the VN association with tunnel bundling.  
+Jonathan: Please update the text, with help of Igor.
+Jonathan: [draft-zhang-pce-resource-sharing] We have good interest in the group 
+          for polling at the last IETF, then the Chairs polled and we had a poor 
+          response. 
+Haomian: The problem could be that the draft took too long time, the content of 
+         this draft is changed from new object to using association group. It 
+         was presented with the other association draft. 
+Jonathan: If the authors can update the I-D, post to the list and solicit 
+          feedback. Then we can look to poll again.
+
+2. Segment Routing
+2.1. Path Segment & bi-directional SR (Cheng Li, 15 min) [40/120]
+draft-li-pce-sr-path-segment-03
+draft-li-pce-sr-bidir-path-02
+
+Jonathan: This is interesting work, several use-cases. There is a base draft in 
+          SPRING, process I propose is - wait for SPRING WG to adopt first and 
+          then we can do adoption poll in PCE. Regarding early allocation, I 
+          hear you, but would prefer to wait until the draft is adopted by the 
+          WG. 
+
+2.2. PCEP for SRv6 (Dhruv Dhody, 15 min) [55/120]
+draft-negi-pce-segment-routing-ipv6-03
+draft-dhody-pce-pcep-srv6-yang-00
+
+Jeff Tentsura: Comment on teminology alignment for max-SL, it should be Depth.
+Dhruv: Will align with the ISIS-SRv6 document, as this documents simply re-uses 
+       it.
+Jonathan: Can be considered for adoption, there was support the last time it was 
+          presented. 
+
+2.3. Binding Segment (Jeff Tantsura, 10 min) [65/120]
+draft-sivabalan-pce-binding-label-sid-05
+
+Jonathan: It is always good to ask if there is a usecase for a feature before 
+          adding it in the I-D to keep things as simple as possible. 
+[Poll]
+How many have read? <>
+Suitable to be adopted? 6-7
+Jeff: Would mail the questions on the mailing list, while adoption is being 
+      worked out.  
+
+3. Optical
+3.1. PCEP for Flex-Grid (Young Lee, 10 min) [75/120]
+draft-lee-pce-flexible-grid-03
+
+Jonathan: The GMPLS work is mature and the market is moving towards Flex-Grid, 
+          so this is timely.  
+Poll: 
+How many have read? about 15
+Suitable to be adopted? about 15
+Jonathan: Good, the next step is to take the poll to the list. 
+
+4. PCE as a Central Controller
+4.1. PCECC Extensions for P2MP/SRv6 (Dhruv Dhody, 15 min) [90/120]
+draft-dhody-pce-pcep-extension-pce-controller-p2mp-00
+draft-dhody-pce-pcep-extension-pce-controller-srv6-00
+
+Jonathan: Regarding Basic PCECC Mode how is the Label Space Management done.
+Dhruv: MPLS Label Management was marked out-of-scope in the base PCECC, it could 
+       be done out of band (yang) or in-band via PCEP (there is another draft 
+       that was presented during IETF 102), PCC give control of part of its 
+       label space to the controller.
+
+5. Other Topics
+5.1. Multi-Layer Association (Quan Xiong, 10 min) [100/120]
+draft-xiong-pce-multilayer-lsp-association-02
+
+Dhruv: See RFC5623 (Inter-layer PCE), if you use this document as a reference 
+       it would help clarify your proposal. There is a use case if you can 
+       clearly identify where this association is useful between higher and 
+       lower layer LSP.
+Jon: Depending on the deployment, if the PCC setting up both LSP, then the 
+     association is already known. I am not saying the use cases are wrong, but 
+     it seems the use cases need to be clarified. 
+Quan Xiong: Ok
+Jonathan: I need to think about Use Case 3 more.
+Poll: 
+How many have read? around 7
+
+*Thanks Jon for Chairing!*
+
+------Thats a wrap-----    
