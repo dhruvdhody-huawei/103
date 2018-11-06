@@ -1,4 +1,4 @@
-PCE Working Group Meeting – 13:50-15:50 Monday Afternoon session I 5th Nov 2018
+﻿PCE Working Group Meeting – 13:50-15:50 Monday Afternoon session I 5th Nov 2018
 
    o Chairs: Jonathan Hardwick, Julien Meuric (remote)
    o Secretery: Dhruv Dhody
@@ -20,7 +20,7 @@ Daniel King: [draft-ietf-pce-inter-area-as-applicability] Will be posting it
 Jonathan Hardwick: [draft-ietf-pce-stateful-pce-p2mp] Will finish shephered
                    review soon.
                    [draft-ietf-pce-association-group] Was updated, waiting to be 
-                   Shephereded.
+                   shepherded.
                    4 drafts ready to be WGLC       
 Adrian Farrel: [draft-ietf-pce-pcep-flowspec] Almost ready, implementers speak 
                up! 
@@ -29,13 +29,13 @@ Haomian Zheng: [draft-ietf-pce-enhanced-errors] Made an update to align with
                extension is added.
 Jonathan: Please take a look at this, if you have a dependent I-D.
 Dhruv Dhody: [draft-ietf-pce-association-diversity, …-policy] No update, we are 
-             waiting  for association group to move. 
+             waiting for association group to move. 
              [draft-ietf-pce-pcep-yang] Update made and asked for an early yang 
              doctor review, and received some comments on the list, will 
              addrress them together.
              [draft-ietf-pce-stateful-pce-lsp-scheduling] No update, and we 
              would like more reviews. 
-             [draft-ietf-pce-lsp-control-request] No update, Simple extention, 
+             [draft-ietf-pce-lsp-control-request] No update, simple extension, 
              basically ready. 
              [draft-ietf-pce-stateful-path-protection] Waiting for association 
              group.
@@ -79,7 +79,7 @@ Jonathan: It is always good to ask if there is a usecase for a feature before
           adding it in the I-D and try to keep things as simple as possible. Get 
           feedback on the mailing list.  
 [Poll]
-How many have read? <>
+How many have read? 7-8
 Suitable to be adopted? 6-7
 Jeff: Would mail the questions on the mailing list, while adoption is being 
       worked out.  
@@ -100,11 +100,12 @@ Jonathan: Good, the next step is to take the poll to the list.
 draft-dhody-pce-pcep-extension-pce-controller-p2mp-00
 draft-dhody-pce-pcep-extension-pce-controller-srv6-00
 
-Jonathan: Regarding Basic PCECC Mode how is the Label Space Management done.
+Jonathan: Regarding basic PCECC Mode, how is the PCC's label space delegated to 
+          the PCE?
 Dhruv: MPLS Label Management was marked out-of-scope in the base PCECC, it could 
        be done out of band (yang) or in-band via PCEP (there is another draft 
-       that was presented during IETF 102), PCC give control of part of its 
-       label space to the controller.
+       that was presented during IETF 102).  Using one of these two methods, the
+       PCC gives control of part of its label space to the controller.
 
 5. Other Topics
 5.1. Multi-Layer Association (Quan Xiong, 10 min) [100/120]
